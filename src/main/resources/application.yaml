@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: store
+strip:
+  apiURL: https://api.strip.com
+  enabled: true
+  timeout: 1000
+  supported-currencies: USD , EUR , GBP
+
+payment: strip
