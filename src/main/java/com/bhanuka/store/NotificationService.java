@@ -2,5 +2,5 @@ package com.bhanuka.store;
 
 
 public interface NotificationService {
-    public void sendNotification(String message);
+    public void sendNotification(String message , String recipientEmail);
 }

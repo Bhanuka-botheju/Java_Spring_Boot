@@ -2,6 +2,7 @@ package com.bhanuka.store;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
@@ -22,5 +23,20 @@ public class AppConfig {
             return new OrderService(paypal());
         }
         return new OrderService(stripe());
+    }
+
+    @Bean
+    public NotificationService email(){
+        return new EmailNotificationService();
+    }
+
+    @Bean
+    public UserRepository save(){
+        return new InMemoryUserRepository();
+    }
+
+    @Bean
+    public UserService userService(){
+        return new UserService(email(),save());
     }
 }

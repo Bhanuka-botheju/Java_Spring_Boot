@@ -10,8 +10,9 @@ public class NotificationManager {
     @Autowired
     public NotificationManager(@Qualifier("email") NotificationService notificationService) {
         this.notificationService = notificationService;
+        System.out.println("NotificationManager Created");
     }
-    public void sendNotification(String message) {
-        notificationService.sendNotification(message);
-    }
+//    public void sendNotification(String message) {
+//        notificationService.sendNotification(message);
+//    }
 }

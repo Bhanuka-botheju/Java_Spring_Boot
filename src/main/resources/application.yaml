@@ -8,3 +8,7 @@ strip:
   supported-currencies: USD , EUR , GBP
 
 payment: strip
+
+email:
+  Host: smtp.gmail.com
+  port: 465
