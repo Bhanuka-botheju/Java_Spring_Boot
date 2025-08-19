@@ -16,20 +16,7 @@ public class UserService {
     }
 
     public void signin(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("get User Name");
-        String userName = scanner.nextLine();
-        System.out.println("get Password");
-        String password = scanner.nextLine();
-        System.out.println("get Email");
-        String email = scanner.nextLine();
-
-        User user = new User(generateID(),email,password,userName);
-
-        userRepository.save(user);
-
-        notificationService.sendNotification("Successfluy",email);
-    }
+       }
 
     public int generateID(){
         return userID++;
