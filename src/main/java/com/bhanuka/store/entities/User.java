@@ -51,4 +51,9 @@ public class User {
         address.setUser(this);
     }
 
+    public void removeAddress(Address address){
+        getAddresses().remove(address);
+        address.setUser(null);
+    }
+
 }
