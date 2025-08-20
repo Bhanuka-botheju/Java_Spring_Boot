@@ -1,29 +1,25 @@
 package com.bhanuka.store;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
+
+import com.bhanuka.store.entities.User;
 
 @SpringBootApplication
 public class StoreApplication {
  
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(StoreApplication.class, args);
-//		var orderService = context.getBean(OrderService.class);
+		var user = new User();
+		user.setName("bhanuka");
+		user.setEmail("bhanuka@gmail.com");
+		user.setPassword("bhanuka123");
 
+		var user2 = new User(1L,"bhanuka2","bhanuka2@gmail.com","prabath2");
 
-		// var userService = context.getBean(UserService.class);
-		// userService.signin();
-
-//		var orderService2 = context.getBean(OrderService.class);
-//		var notificationManager =  context.getBean(NotificationManager.class);
-
- 
-//		var orderService = new OrderService();
-//		orderService.setPaymentService(new PayPalPaymentService());
-
-//		orderService.placeOrder();
-//		notificationManager.sendNotification(" Hii Bhanuka");
-
+		var user3 = User.builder()
+			.id(2L)
+			.name("bhanuka3")
+			.email("bhanuka@gmail.com")
+			.password("bhanuka123")
+			.build();
 	}
 
 }
