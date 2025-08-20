@@ -1,5 +1,4 @@
 package com.bhanuka.store;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -12,8 +11,8 @@ public class StoreApplication {
 //		var orderService = context.getBean(OrderService.class);
 
 
-		var userService = context.getBean(UserService.class);
-		userService.signin();
+		// var userService = context.getBean(UserService.class);
+		// userService.signin();
 
 //		var orderService2 = context.getBean(OrderService.class);
 //		var notificationManager =  context.getBean(NotificationManager.class);
